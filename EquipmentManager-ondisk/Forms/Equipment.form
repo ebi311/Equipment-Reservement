@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='49257E0C001B0B52'>
+<noteinfo noteid='15a' unid='29AB52CF8CF91EA049257E0C001B152F' sequence='22'>
+<created><datetime>20150318T135548,95+09</datetime></created>
+<modified><datetime>20150318T200153,66+09</datetime></modified>
+<revised><datetime>20150318T200153,65+09</datetime></revised>
+<lastaccessed><datetime>20150318T200153,66+09</datetime></lastaccessed>
+<addedtofile><datetime>20150318T135549,19+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby>
+<item name='$Comment' sign='true'><text/></item>
+<item name='equipmentName_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='depository_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='manager_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='validPeriod_1' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='movable_1' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>Equipment</text></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>Equipment</text></item>
+<item name='equipmentId' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='equipmentName' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='depository' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='manager' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='validPeriod' summary='false'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='movable' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='note' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='isLimited' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>isLimited</text><text>note</text><text
+>movable</text><text>validPeriod</text><text>manager</text><text>depository</text><text
+>equipmentName</text><text>equipmentId</text></textlist></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+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
+AQEACg==
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRw/AAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABAPDw8AABAAAAAAAJAAAAAAABAPDw8AAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item></note>
+

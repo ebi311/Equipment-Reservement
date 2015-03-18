@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ replicaid='49257D6C0000B453'>
+<noteinfo noteid='11a' unid='AFE8093FCD976EB549257D6C0000B459' sequence='8'>
+<created><datetime>20141009T090741,69+09</datetime></created>
+<modified><datetime>20141009T091129,80+09</datetime></modified>
+<revised><datetime>20141009T091129,79+09</datetime></revised>
+<lastaccessed><datetime>20141009T091129,80+09</datetime></lastaccessed>
+<addedtofile><datetime>20141009T090741,73+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby>
+<item name='$Daos'><text>0</text></item>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAREeiIiIiIiIiIiIiIiOEREYiIiIiIiIiIiIiIiIiI8RiIiI4R
+GIiBEYiIiIiIiI8YiIjxERHogRGIiIiIiIiI6IiPERERGIERiIiIiIiIiIiI4RERER+BEYiIiIiI
+iIiIiBEREREfgRGIiIiIiIiIiIgRERERHoERiIju6IiIiIiPERERERiBEYiBERGIiIiIgRERERGI
+gRGIERERGIiIiIERERH4iIERjxERERGIiIiBERH4iIiBEYERERER+IiIiIiIiIiIgRGPERERERiI
+iIiIiIiIiIERjhEREREYiIiIiI8R/oiBEYjxERERH4iIiIgRERH4gRGIjhERER+IiIiPERERGIER
+iIiPEREfiIiI4RERER+BEYiIiI7//oiIiBEREREfgRGIiIiIiIiIiI4RERERHoERiIj/6IiIiIiP
+ERERERiBEYjhERGIiIiIgRERERGIgRGIERERGIiIiIERERHoiIERjxERERGIiIiBERHoiIiBEYER
+ERER+IiIiIiIiIiIgRGPERERERiIiIiIiIiIiIERjhEREREYiIiIiIiIiIiBEYjxERERH4iIiIiI
+iIiIgRGIjhERER+I+IiIiIiIiIERiIiPEREfiBiIiIiIiIiBEYiIiIjv6IgRiIiIiIiIiIiIiIiI
+iIiBERiIiIiIiIiIiIiIiIiOEQ==
+</rawitemdata></item>
+<item name='$LaunchXPageRunOnServer'><text>0</text></item>
+<item name='$TITLE'><text>Plantago</text></item>
+<item name='$Flags'><text>J</text></item>
+<item name='$FlagsNoRefresh'><text>rv</text></item></note>
+
