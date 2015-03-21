@@ -1,0 +1,6 @@
+#toolbar {
+    margin-bottom: 1em;
+}
+#filters .list-group-item{
+	cursor: pointer;
+}

@@ -2,53 +2,102 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" createForm="false">
 	<xp:this.resources>
 		<xp:styleSheet href="fullcalendar/fullcalendar.css"></xp:styleSheet>
+		<xp:styleSheet href="datetimepicker/jquery.datetimepicker.css"></xp:styleSheet>
 		<xp:script src="fullcalendar/fullcalendar.js" clientSide="true"></xp:script>
+		<xp:script src="datetimepicker/jquery.datetimepicker.js"
+			clientSide="true"></xp:script>
 		<xp:script src="/index_js.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row clearfix">
 			<div class="col-md-12 column">
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="navbar-header">
-						<xp:link escape="true"
-							text="Equipment reservation on XPages" id="link1" value="#"
-							styleClass="navbar-brand">
+						<xp:link escape="true" text="Equipment reservation on XPages"
+							id="link1" value="#" styleClass="navbar-brand">
 						</xp:link>
 					</div>
 				</nav>
-				<div class="btn-toolbar" role="toolbar">
-					<div class="btn-group" role="group">
-						<xp:button value=" reserve" id="reserve"
-							styleClass="btn btn-primary">
-							<span class="glyphicon glyphicon-plus"
-								aria-hidden="true">
+				<div id="toolbar" class="btn-toolbar" role="toolbar">
+					<div class="btn-group pull-right" role="group">
+						<xp:button value=" maintenance" id="reserve" styleClass="btn btn-primary">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true">
 							</span>
 						</xp:button>
 					</div>
-					<div class="btn-group" role="group">
-						<xp:button value=" prev day" id="prevDay"
-							styleClass="btn">
-							<span
-								class="glyphicon glyphicon-chevron-left" aria-hidden="true">
-							</span>
-						</xp:button>
-					</div>
-					<div class="btn-group" role="group">
-						<xp:button value="today" id="today"
-							styleClass="btn">
-						</xp:button>
-					</div>
-					<div class="btn-group" role="group">
-						<xp:button value="" id="nextDay"
-							styleClass="btn">
-							next day&#160;
-							<span
-								class="glyphicon glyphicon-chevron-right" aria-hidden="true">
-							</span>
-						</xp:button>
+					<div class="btn-toolbar" role="toolbar">
+						<div class="btn-group" role="group">
+							<xp:button value=" reserve" id="button1" styleClass="btn btn-primary">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true">
+								</span>
+							</xp:button>
+						</div>
 					</div>
 				</div>
-				<div id='calendar'>
+				<div id="filters" class="col-md-2">
+					<div id="rooms" class="panel list-group">
+						<p class="list-group-item small">meeting room 1</p>
+						<p class="list-group-item small">meeting room 2</p>
+						<p class="list-group-item small">meeting room 3</p>
+					</div>
+					<div id="equipments" class="panel list-group">
+						<p class="list-group-item small">camera 1</p>
+						<p class="list-group-item small">UCS 1</p>
+						<p class="list-group-item small">Laptop PC</p>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div id='calendar'>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="reservatiomModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&#10005;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">reserve</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<label for="reservatiomModal_equipment">equipment :</label>
+						<select id="reservatiomModal_equipment" class="form-control">
+							<option value="-1">select one...</option>
+							<option>meeting room 1</option>
+							<option>meeting room 2</option>
+							<option>meeting room 3</option>
+							<option>camera 1</option>
+							<option>UCS 1</option>
+							<option>Laptop PC</option>
+						</select>
+						<label for="reservatiomModal_startDate">datetime :</label>
+						<div class="row">
+							<div class="col-xs-3">
+								<input type="text" class="form-control" id="reservatiomModal_date" />
+							</div>
+							<div class="col-xs-2">
+								<input type="text" class="form-control" id="reservatiomModal_startTime" />
+							</div>
+							<div class="col-xs-2">
+								<input type="email" class="form-control" id="reservatiomModal_endTime" />
+							</div>
+						</div>
+						<label for="reservatiomModal_subscriber">subscriber :</label>
+						<input type="text" class="form-control" id="reservatiomModal_subscriber" />
+						<label for="reservatiomModal_note">note :</label>
+						<input type="text" class="form-control" id="reservatiomModal_note" />
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						cancel</button>
+					<button type="button" class="btn btn-primary">reserve</button>
 				</div>
 			</div>
 		</div>
