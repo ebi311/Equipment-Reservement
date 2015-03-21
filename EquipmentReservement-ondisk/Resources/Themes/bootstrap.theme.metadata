@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="49257E0C001ABBDC" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="206" sequence="8" unid="FB045468536A9A1249257E0C003F64C6">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.3" replicaid="49257E09000EC4AE" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1de" sequence="8" unid="FB045468536A9A1249257E0C003F64C6">
 <created><datetime>20150318T203225,66+09</datetime></created>
-<modified><datetime>20150318T203406,55+09</datetime></modified>
-<revised><datetime>20150318T203406,54+09</datetime></revised>
-<lastaccessed><datetime>20150318T203406,55+09</datetime></lastaccessed>
-<addedtofile><datetime>20150318T203225,67+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
-<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby>
+<modified><datetime>20150321T111631,87+09</datetime></modified>
+<revised><datetime>20150321T111631,86+09</datetime></revised>
+<lastaccessed><datetime>20150321T111631,87+09</datetime></lastaccessed>
+<addedtofile><datetime>20150319T003804,61+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></wassignedby>
 <item name="$TITLE"><text>bootstrap.theme</text></item>
 <item name="$Flags"><text>34567Cg~`</text></item>
 <item name="$DesignerVersion"><text>8.5.3</text></item>

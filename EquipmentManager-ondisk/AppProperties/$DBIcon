@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='49257E0C0057F5E5'>
+<noteinfo noteid='166' unid='5E0B7E0474EFD4D849257E0C005A3428' sequence='1'>
+<created><datetime>20150319T012515,92+09</datetime></created>
+<modified><datetime>20150319T012515,99+09</datetime></modified>
+<revised><datetime>20150319T012515,93+09</datetime></revised>
+<lastaccessed><datetime>20150319T012515,99+09</datetime></lastaccessed>
+<addedtofile><datetime>20150319T012515,99+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>1116</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAAFwEAAABAAAAAQAAAAAAAAB8
+AGYEAABcBFwEiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+g
+vaeTAAAACXBIWXMAAAcqAAAHKgHj0dTXAAAAB3RJTUUH3wMSEBkG/ElOwwAAA+lJREFUWMPFl1uI
+VlUUx3/fdByrr3FsKl+6EWwsyYmsfKmHNPLrNg9t6KF6UArGlRAYRF4CI3zRopci0V0xqeFUVGyI
+GmuGQEp9MGq0yS6yyy4TlqnThXF0/OabXtaBzcc5Z67aho991lr7rPU/67bXB//zKk3mJWNlHnA3
+cAooK/tfoCnSWQN+Ct69V6SrYZLAPwD2A63AVuBT4GlgD9ABvAl8AmwxVmZPGYCx0mqsNEWsq/Xd
+zuDdMeAR4CqgPXh3PHjXD/wMXARcoDpajJVrJwTAWEmMlT+Ar4B/jJUrI/FvwF59Xgu8CzyVCoN3
+A5GeNuA48J2x8vFEPHALMCein9F9FPgheFdTekANHDNWmuty7DSwPuJVjJXLUyIZA0Coo7/UfSWw
+wlgZAR5U3kndNxkre4FBoCd4d8JY+RFYEOn5fVwe0PguB34F3grebY6AHwK+B54F7gQ+1P11lX2T
+6g/ePaDyfuDW4N1IoQeMlfOBS9X9r0RlFldBZQzvNQAvRPQM4Aqgy1i5Tsv3l1IOgM+A+cAB4PZI
+tDR498Yk+sZWYFnEWgU8D6zOy4FZmkCjdfztmkCDGtP22J2RwTLwErBbw/Jw3ZEZujcmE/iQmibh
+BgV2AhBgJONsM2CBR5XeBSzKUjoRAATvFuoX3g8sBjqMlbzjHcC64N2QsdKiZTpuAOfpL86RBmOl
+VTvbE5ojl+S8fxoYAnYYKw3AxdN6GeUkWpwvrwbvlhsrvcCNGceXAD3AuiRSMEtLZzB4d2YcBhMg
+Cd6dyhCnSdai+5PKqwHv5DWiTm2pw8bKnDGMLwHOAEPaM/JWGqLFwEYtvcMaHoCRNK4E79qALhUc
+KjB+DdAdsaoFAMpAH/C20q8BWwCv9I4E2GesvBi8WwO0qZuaC5TG4CrBu2oO0Mv08XPgDmBX8K49
+kp8Ebkq0Z6/WweF9lQ/nKN2mlVMF5gbvDhcAvU33XuDmjHunBIwm2iL7tKmkRd1orPQF71rrjC8F
+tgfvlmUY3BZ1zt0azqo2oaaMkh8A+kuRuzqBecBMvYgADgbv5hsrm4HHCozn5UspeDda/xzTpZzy
++isaNg8CNwCbgncrzslUrCD+Bi6MPXE2xvK8geTl4F05mnKuN1a+PicAjJVuQIyV3gwQfWc1BDqx
+xpOOAx6vy4lhoFFDNDd4d3RaABgrO/XfTrp6gneVKCeORNURr8bx3B2FITBWuuqMd6fGtU1X9YoF
+WBS8K0VtuzylHDBW1gD3RLyPgnd3ZZz9VveHFNR9OunWphQCY2UASP+/7Qze3VvQ29N4P6d3x7RU
+QUWTbG2ecf3iP3UK+gJYmd6iU13/AcNhWoWubItaAAAAAElFTkSuQmCC
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime>20150319T012506,42+09</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\kenji\Downloads\meetingMaint.png</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+
