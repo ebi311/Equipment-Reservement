@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex" viewState="nostate">
+
+
+	<xe:restService id="reservations" pathInfo="reservations">
+
+
+
+
+		<xe:this.service>
+			<xe:viewJsonLegacyService viewName="Reservations"
+				defaultColumns="true" systemColumns="2">
+
+
+				<xe:this.keys><![CDATA[#{javascript:param.get("date");}]]></xe:this.keys>
+			</xe:viewJsonLegacyService>
+		</xe:this.service>
+	</xe:restService>
+</xp:view>

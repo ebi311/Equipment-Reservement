@@ -1,17 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='49257E0C001ABBDC'>
-<noteinfo noteid='15a' unid='888FD16C73602B3D49257E0C003AE5D6' sequence='8'>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.3'
+ replicaid='49257E09000EC4AE'>
+<noteinfo noteid='1e2' unid='888FD16C73602B3D49257E0C003AE5D6' sequence='4'>
 <created><datetime>20150318T194319,26+09</datetime></created>
-<modified><datetime>20150318T203445,50+09</datetime></modified>
-<revised><datetime>20150318T203445,49+09</datetime></revised>
-<lastaccessed><datetime>20150318T203445,50+09</datetime></lastaccessed>
-<addedtofile><datetime>20150318T194319,45+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
-<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby>
+<modified><datetime>20150322T180020,80+09</datetime></modified>
+<revised><datetime>20150322T180020,79+09</datetime></revised>
+<lastaccessed><datetime>20150322T180020,80+09</datetime></lastaccessed>
+<addedtofile><datetime>20150319T003804,83+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></wassignedby>
 <item name='$Comment' sign='true'><text/></item>
-<item name='Register' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='startDate' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
@@ -71,6 +69,7 @@ ADACAAAAAAEAAgEAAAoAAAAAAAAAAAsAAAAAAGVuZERhdGV0aW1lAN4GAACK/4X/CAABAAAKgQKD
 BAIAhf8VAAEBAApOb3RlKBCU9RCNbCk6AIX/CQABAAAKCQDdBgAAiv/+/1AAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAIr/KACKAAAFADACAAAAAAAAAgEAAAoAAAAAAAAAAAQAAAAAAG5vdGViDgEAhAAAAAAA
-AAAAAN4GAACK/4X/CAABAAAK
+AAAAAN4GAACK/4X/CAABAAAKgQKDBAIAhf8OAAEAAApVTklEOgndBgAArf+p/yQAAQAYAAQAGAAY
+AAAACgCQAFYBAwAHAAwABQAJMFMwRQCF/wgAAQAACqoC3gYAAK4Ahf8IAAEAAAo=
 </rawitemdata></item></note>
 
