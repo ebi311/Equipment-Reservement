@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.3" replicaid="49257E100082CF28" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="24e" sequence="6" unid="0E216C32576C760E49257E11003D7C9B">
+<created><datetime>20150323T201135,95+09</datetime></created>
+<modified><datetime>20150323T202329,80+09</datetime></modified>
+<revised><datetime>20150323T202329,79+09</datetime></revised>
+<lastaccessed><datetime>20150323T202329,80+09</datetime></lastaccessed>
+<addedtofile><datetime>20150323T201135,96+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby>
+<item name="$TITLE" sign="true"><text>api_jss</text></item>
+<item name="$Flags"><text>.5834Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+</note>

@@ -3,18 +3,19 @@
 	xmlns:xe="http://www.ibm.com/xsp/coreex" viewState="nostate">
 
 
+	<xp:this.resources>
+		<xp:script src="/api_jss.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
 	<xe:restService id="reservations" pathInfo="reservations">
 
 
 
 
+
 		<xe:this.service>
-			<xe:viewJsonLegacyService viewName="Reservations"
-				defaultColumns="true" systemColumns="2">
-
-
-				<xe:this.keys><![CDATA[#{javascript:param.get("date");}]]></xe:this.keys>
-			</xe:viewJsonLegacyService>
+			<xe:customRestService>
+				<xe:this.doGet><![CDATA[#{javascript:toJson(api.getEvents(param.get("year"), param.get("month")));}]]></xe:this.doGet>
+			</xe:customRestService>
 		</xe:this.service>
 	</xe:restService>
 </xp:view>
