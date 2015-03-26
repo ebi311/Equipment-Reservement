@@ -94,7 +94,7 @@
 							<div class="col-xs-12">
 								<label for="reservatiomModal_startDate" class="control-label">
 									datetime :
-							</label>
+								</label>
 							</div>
 							<div class="col-xs-3">
 								<input type="text" class="form-control" id="reservatiomModal_date"
@@ -123,6 +123,7 @@
 							<input type="text" class="form-control" id="reservatiomModal_note"
 								name="note" />
 						</p>
+						<input type="hidden" id="reservatiomModal_id" name="id" />
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -132,6 +133,9 @@
 					<button id="reserve" type="button" class="btn btn-primary">
 						reserve
 					</button>
+					<button id="update" type="button" class="btn btn-primary">
+						update
+                    </button>
 				</div>
 			</div>
 		</div>

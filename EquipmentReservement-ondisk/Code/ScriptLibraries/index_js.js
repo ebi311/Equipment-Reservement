@@ -13,7 +13,7 @@ $(document).ready(function() {
     	firstDay : 1,
     	timeFormat: {
     	    agenda: 'HH:mm{ - HH:mm}',
-    	    '': 'HH(:mm)'
+    	    '': 'HH:mm'
     	},
     	dayNames :['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
     	dayNamesShort :['日','月','火','水','木','金','土'],
@@ -39,11 +39,12 @@ $(document).ready(function() {
     	unselectAuto : false,
     	selectHelper : true,
     	hiddenDays : [0,6],
+    	editable: true,
     	select : calendar.select,
-    	editable: true
+    	eventClick: calendar.eventClick
     });
 
-    //date time picker
+    // date time picker
     $('#reservatiomModal_date').datetimepicker(calendar.datePickerOption);
     $('#reservatiomModal_startTime').datetimepicker(calendar.timePickerOption);
     $('#reservatiomModal_endTime').datetimepicker(calendar.timePickerOption);
@@ -52,22 +53,28 @@ $(document).ready(function() {
     });
     $('#reservatiomModal').on('hide.bs.modal', function(e){
     	$('#calendar').fullCalendar( 'unselect' );
-    	//error表示を解除
+    	// error表示を解除
     	$('.has-error', $('#reservatiomModal')).removeClass('has-error');
     	
     });
     
     calendar.getEvent();
-    
-    $('#modalForm').on('submit', calendar.postEvent);
+    // 保存ボタンをおした時の処理
+    $('#modalForm').on('submit', calendar.modifyReservation);
     $('#reserve').click(function (){
+    	calendar.method = 'POST';
+    	$('#modalForm').submit();
+    });
+    $('#update').click(function(){
+    	calendar.method = 'PUT';
     	$('#modalForm').submit();
     });
     $('#message').hide();
-    //詳細ダイアログの設備選択ドロップリストの選択肢のセット
+    // 詳細ダイアログの設備選択ドロップリストの選択肢のセット
     calendar.setEquipmentItems();
 });
 var calendar ={};
+calendar.method;
 calendar.datetimeFormatString = 'yyyy/MM/dd HH:mm';
 calendar.dateFormatString = 'yyyy/MM/dd';
 calendar.timeFormatString = 'HH:mm';
@@ -98,14 +105,33 @@ calendar.select = function select(startDate, endDate, allDay, jsEvent, view){
 	$('#reservatiomModal_endTime').val(endTimeStr);
 	$('#reservatiomModal_subscriber').val('');
 	$('#reservatiomModal_note').val('');
-	
+	$('#update').hide();
+	$('#reserve').show();
+};
+calendar.eventClick = function eventClick(event, jsEvent, view){
+	$('#reservatiomModal').modal();
+	$('#reservatiomModal_equipment').val(event.equipmentId);
+	var dateStr = 	
+		$.fullCalendar.formatDate( event.start, calendar.dateFormatString);
+	$('#reservatiomModal_date').val(dateStr);
+	var startTimeStr = 
+		$.fullCalendar.formatDate( event.start, calendar.timeFormatString);
+	$('#reservatiomModal_startTime').val(startTimeStr);
+	var endTimeStr = 
+		$.fullCalendar.formatDate( event.end, calendar.timeFormatString);
+	$('#reservatiomModal_endTime').val(endTimeStr);
+	$('#reservatiomModal_subscriber').val(event.subscriber);
+	$('#reservatiomModal_note').val(event.note);
+	$('#reservatiomModal_id').val(event.id);
+	$('#update').show();
+	$('#reserve').hide();
 };
 calendar.getEvent = function getEvent(){
-	//現在の月を取得する
+	// 現在の月を取得する
 	var currentDate = $('#calendar').fullCalendar('getDate');
 	var year = $.fullCalendar.formatDate(currentDate, 'yyyy');
 	var month = $.fullCalendar.formatDate(currentDate, 'MM');
-	//月のすべてのエントリーを取得する
+	// 月のすべてのエントリーを取得する
 	var url = './api.xsp/reservations?year=' + year + "&month=" + month;
 	var events = [];
 	$.ajax({
@@ -134,13 +160,14 @@ calendar.setEquipmentItems = function setEquipmentItems(){
 		}
 	});
 };
-calendar.postEvent = function postEvent(e){
+calendar.modifyReservation = function modifyReservation(e){
 	e.preventDefault();
-	//error表示を解除
+	// error表示を解除
 	$('.has-error', this).removeClass('has-error');
+	var id = $('#reservatiomModal_id').val();
 	var equipId = $('#reservatiomModal_equipment').val();
 	var error = false;
-	//選択していない場合はエラー
+	// 選択していない場合はエラー
 	if(!equipId || equipId === '' || equipId === '-1'){
 		$('#reservatiomModal_equipment')
 			.parent()
@@ -159,7 +186,7 @@ calendar.postEvent = function postEvent(e){
 	var date = $('#reservatiomModal_date').val();
 	var startTime = $('#reservatiomModal_startTime').val();
 	var endTime = $('#reservatiomModal_endTime').val();
-	//日付を合成
+	// 日付を合成
 	var start = new Date(date+' '+startTime+':00');
 	if(start.getTime() === 0 || isNaN(start.getTime())){
 		$('#reservatiomModal_date')
@@ -180,12 +207,13 @@ calendar.postEvent = function postEvent(e){
 	if(error){
 		return;
 	}
-	//送信
+	// 送信
 	var url = './api.xsp/reservation/';
 	
 	$.ajax({
+		id: id,
 		url : url,
-		method: 'POST',
+		method: calendar.method,
 		data : sendData,
 		dataType: 'json',
 		success: function(data){

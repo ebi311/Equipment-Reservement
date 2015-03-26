@@ -26,14 +26,7 @@ api.getReservation = function getReservation(unid){
 api.createReservation = function createReservation(obj){
 	var resDoc = database.createDocument();
 	resDoc.replaceItemValue('form', 'Reservation');
-	resDoc.replaceItemValue('equipmentId', obj.equipmentId);
-	resDoc.replaceItemValue('subscriber', obj.subscriber);
-	resDoc.replaceItemValue('startDatetime', api._unixTimeToNotesDate(obj.start));
-	resDoc.replaceItemValue('endDatetime', api._unixTimeToNotesDate(obj.end));
-	resDoc.replaceItemValue('note', obj.note);
-	
-	resDoc.save(false,false);
-	
+	api._modifyReservation(resDoc,obj);
 	return api._createCallendarEvent(resDoc);
 };
 api.getEquipments = function getEquipments(){
@@ -51,6 +44,25 @@ api.getEquipments = function getEquipments(){
 	}
 	return ret;
 };
+api.updateEvent = function(obj){
+	var unid = obj.unid;
+	var resDoc:NotesDocument = database.getDocumentByUNID(unid);
+	if(!!resDoc){
+		api._modifyReservation(resDoc,obj);
+	}
+	return api._createCallendarEvent(resDoc);
+};
+api._modifyReservation = function _modifyReservation(doc,obj){
+	doc.replaceItemValue('equipmentId', obj.equipmentId);
+	doc.replaceItemValue('subscriber', obj.subscriber);
+	doc.replaceItemValue('startDatetime', api._unixTimeToNotesDate(obj.start));
+	doc.replaceItemValue('endDatetime', api._unixTimeToNotesDate(obj.end));
+	doc.replaceItemValue('note', obj.note);
+	
+	doc.save(false,false);
+	
+	return doc;
+}
 api._unixTimeToNotesDate = function _unixTimeToNotesDate(unixTime){
 	var date = new Date();
 	date.setTime(+unixTime);
@@ -61,6 +73,7 @@ api._unixTimeToNotesDate = function _unixTimeToNotesDate(unixTime){
 api._createCallendarEvent = function _createCallendarEvent(doc){
 	var event = {
 			id : doc.getUniversalID(),
+			equipmentId: doc.getItemValueString('equipmentId'),
 			title: api._createTitle(doc),
 			start: doc.getItemValueDateTimeArray('startDatetime')[0].toJavaDate().getTime() / 1000,
 			end: doc.getItemValueDateTimeArray('endDatetime')[0].toJavaDate().getTime() / 1000,
@@ -76,7 +89,7 @@ api._createTitle = function _createTitle(doc){
 	var equipDoc = equipView.getDocumentByKey(equipId);
 	var equipName = !!equipDoc ? equipDoc.getItemValueString('equipmentName') : '(none)';
 	var subscriber = doc.getItemValueString('subscriber');
-	return equipName + '[' + subscriber + ']';
+	return equipName + ' [' + subscriber + ']';
 };
 api._getEquipMangerDb = function _getEquipMangerDb(){
 	var equipDb = requestScope.get('equipDb');

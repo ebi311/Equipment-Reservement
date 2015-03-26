@@ -33,6 +33,17 @@ var obj = {
 };
 var ret = [api.createReservation(obj)];
 return toJson(ret);}]]></xe:this.doPost>
+				<xe:this.doPut><![CDATA[#{javascript:var obj = {
+	unid: param.get('id'),
+	equipmentId: param.get('equipmentId'),
+	subscriber: param.get('subscriber'),
+	start: param.get('start'),
+	end: param.get('end'),
+	note: param.get('note'),
+	date: param.get('date')
+};
+var ret = [api.updateEvent(obj)];
+return toJson(ret);}]]></xe:this.doPut>
 			</xe:customRestService>
 		</xe:this.service>
 	</xe:restService>
