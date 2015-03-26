@@ -18,4 +18,29 @@
 			</xe:customRestService>
 		</xe:this.service>
 	</xe:restService>
-</xp:view>
+	<xe:restService id="reservation" pathInfo="reservation">
+		<xe:this.service>
+			<xe:customRestService
+				doGet="#{javascript:api.getReservation(param.get('unid'));}">
+				<xe:this.doPost><![CDATA[#{javascript:
+var obj = {
+	equipmentId: param.get('equipmentId'),
+	subscriber: param.get('subscriber'),
+	start: param.get('start'),
+	end: param.get('end'),
+	note: param.get('note'),
+	date: param.get('date')
+};
+var ret = [api.createReservation(obj)];
+return toJson(ret);}]]></xe:this.doPost>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService>
+	<xe:restService id="equipments" pathInfo="equipments">
+		<xe:this.service>
+			<xe:customRestService>
+				<xe:this.doGet><![CDATA[#{javascript:var ret = api.getEquipments();
+return toJson(ret);}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService></xp:view>

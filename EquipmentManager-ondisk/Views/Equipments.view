@@ -1,53 +1,45 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.3'
- replicaid='49257E0C0057F5E5'>
-<noteinfo noteid='15a' unid='2026179615D4910749257E0C003A5C52' sequence='3'>
+<view name='Equipments' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.3'
+ replicaid='49257E1000831D7B' showinmenu='false' publicaccess='false' designerversion='8.5.3'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='false' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='black' headerbgcolor='white'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='15a' unid='2026179615D4910749257E0C003A5C52' sequence='5'>
 <created><datetime>20150318T193727,22+09</datetime></created>
-<modified><datetime>20150322T161755,91+09</datetime></modified>
-<revised><datetime>20150322T161755,90+09</datetime></revised>
-<lastaccessed><datetime>20150322T161755,91+09</datetime></lastaccessed>
-<addedtofile><datetime>20150319T010109,04+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></updatedby>
-<wassignedby><name>CN=Kenji Ebihara/O=Kenji Ebihara</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Equipments</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-ogACAEQAAgAkNAUABwBtb3ZhYmxlAAAAAAAAAAAA8D8KAq8AIAAOAAEABAB0cnVlrgASAAEABQBm
-YWxzZQCuAAQAtQMDAAUAUABLAAcACwANAAcAAgALAAkABABlcXVpcG1lbnRJZGVxdWlwbWVudE5h
-bWVtYW5hZ2VyJDR2YWxpZFBlcmlvZCRDb25mbGljdCRSRUYABAAEAAAACABmAAMA
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-BgAAAABE
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAFAAYACAAAAFZDAAALAAIAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAA0ABAAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAABwAHAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAACAAcA
-UAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAsADAAAAAAAUAABAAAKAAAAAAAAAAEAAgIAAABl
-cXVpcG1lbnRJZElEZXF1aXBtZW50TmFtZU5hbWVtYW5hZ2VyTWFuYWdlciQ0TW92YWJsZVAAAgBE
-AAIAJDQFAAcAbW92YWJsZQAAAAAAAAAAAPA/CgKvACAADgABAAQAdHJ1Za4AEgABAAUAZmFsc2UA
-rgAEALUDAwAHAAoAAwAJNlMAdmFsaWRQZXJpb2RWYWxpZCBwZXJpb2QmAAEAAAABAQAJAQAACgEB
-DgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA
-AAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAA
-V0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAA
-AAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAA
-AADEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAAB
-AP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQBYQwBMgAEAAAAAAAECAgIB
-AQEBBwQCAAAAAAAAAAAvLyA6WUMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>PY</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRw/AAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABAPDw8AABAAAAAAAJAAAAAAABAPDw8AAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/1YAAAABAAAAnwEAAA0AAAAAAAAAYWRkIGVxdWlwbWVu
-dAAyAAAAJAACAOgDAAAAAAAAAQAAAAEACQBFcXVpcG1lbnQA7QMDAAcADAAFAAk0UzZTAF//EAAB
-ANUAAAAAAAAAAAA=
-</rawitemdata></item></note>
+<modified><datetime>20150324T133204,13+09</datetime></modified>
+<revised><datetime>20150324T133204,12+09</datetime></revised>
+<lastaccessed><datetime>20150324T133204,13+09</datetime></lastaccessed>
+<addedtofile><datetime>20150323T085216,72+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></updatedby>
+<wassignedby><name>CN=Kenji Ebihara/OU=R/O=RSI</name></wassignedby><code event='selection'><formula
+>SELECT @All</formula></code>
+<actionbar bgcolor='#f0f0f0' bordercolor='black'>
+<actionbuttonstyle bgcolor='#f0f0f0'/><font color='system'/><border style='solid'
+ width='0px 0px 1px'/>
+<action title='add equipment'><code event='click'><formula>@Command([Compose]; ""; "Equipment")</formula></code></action></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='equipmentId' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='ID'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='equipmentName' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Name'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='manager' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Manager'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='$4' width='10' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Movable'><font size='9pt' style='bold'/></columnheader><code event='value'><formula
+>@If(movable=1; "true";"false")</formula></code></column>
+<column hidedetailrows='false' itemname='validPeriod' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Valid period'><font size='9pt' style='bold'/></columnheader><datetimeformat
+ show='datetime' date='yearmonthday' fourdigityearfor21stcentury='true' time='hourminute'
+ zone='never' dateformat='yearmonthdayweekday' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1='/' dateseparator2='/'
+ dateseparator3=' ' timeseparator=':' timeformat24='true' preference='usersetting'/><numberformat
+ format='general' punctuated='false' parens='false' percent='false' bytes='false'/></column></view>
 

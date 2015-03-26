@@ -29,8 +29,8 @@ $(document).ready(function() {
     	    week: 'M/d ddd',
     	    day: 'M/d dddd'
     	},
-//    	minTime: 8,
-//    	maxTime: 20,
+    	minTime: 8,
+    	maxTime: 20,
     	snapMinutes : 30,
     	slotMinutes : 30,
     	axisFormat : 'HH:mm',
@@ -39,9 +39,11 @@ $(document).ready(function() {
     	unselectAuto : false,
     	selectHelper : true,
     	hiddenDays : [0,6],
-    	select : calendar.select
+    	select : calendar.select,
+    	editable: true
     });
 
+    //date time picker
     $('#reservatiomModal_date').datetimepicker(calendar.datePickerOption);
     $('#reservatiomModal_startTime').datetimepicker(calendar.timePickerOption);
     $('#reservatiomModal_endTime').datetimepicker(calendar.timePickerOption);
@@ -50,9 +52,20 @@ $(document).ready(function() {
     });
     $('#reservatiomModal').on('hide.bs.modal', function(e){
     	$('#calendar').fullCalendar( 'unselect' );
+    	//error表示を解除
+    	$('.has-error', $('#reservatiomModal')).removeClass('has-error');
+    	
     });
     
     calendar.getEvent();
+    
+    $('#modalForm').on('submit', calendar.postEvent);
+    $('#reserve').click(function (){
+    	$('#modalForm').submit();
+    });
+    $('#message').hide();
+    //詳細ダイアログの設備選択ドロップリストの選択肢のセット
+    calendar.setEquipmentItems();
 });
 var calendar ={};
 calendar.datetimeFormatString = 'yyyy/MM/dd HH:mm';
@@ -60,6 +73,7 @@ calendar.dateFormatString = 'yyyy/MM/dd';
 calendar.timeFormatString = 'HH:mm';
 calendar.datePickerOption = {
 	timepicker: false,
+	format: 'Y/m/d',
 	lang: 'ja'
 };
 calendar.timePickerOption = {
@@ -84,6 +98,7 @@ calendar.select = function select(startDate, endDate, allDay, jsEvent, view){
 	$('#reservatiomModal_endTime').val(endTimeStr);
 	$('#reservatiomModal_subscriber').val('');
 	$('#reservatiomModal_note').val('');
+	
 };
 calendar.getEvent = function getEvent(){
 	//現在の月を取得する
@@ -98,20 +113,86 @@ calendar.getEvent = function getEvent(){
 		method: 'GET',
 		dataType: 'json',
 		success: function complete(data, textStatus, jqXHR){
-			var entries = data;
-			for(var i=0, max=entries.length; i<max; i++){
-				var event = {};
-				var entry = entries[i];
-				event.id = entry.id;
-				event.title = entry.title;
-				event.start = new Date();
-				event.start.setTime(+entry.start);
-				event.end = new Date();
-				event.end.setTime(+entry.end);
-				events.push(event);
-			}
-			$('#calendar').fullCalendar('addEventSource', events);
+			$('#calendar').fullCalendar('addEventSource', data);
 			$('#calendar').fullCalendar('rerenderEvents');
 		}
 	});
 };
+calendar.setEquipmentItems = function setEquipmentItems(){
+	$.ajax({
+		url : './api.xsp/equipments',
+		method: 'GET',
+		dataType: 'json',
+		success: function(data){
+			var equipSelect = $('#reservatiomModal_equipment');
+			$.each(data, function(i, item){
+				var option = $('<option>');
+				option.val(item.id);
+				option.html(item.name);
+				equipSelect.append(option);
+			});
+		}
+	});
+};
+calendar.postEvent = function postEvent(e){
+	e.preventDefault();
+	//error表示を解除
+	$('.has-error', this).removeClass('has-error');
+	var equipId = $('#reservatiomModal_equipment').val();
+	var error = false;
+	//選択していない場合はエラー
+	if(!equipId || equipId === '' || equipId === '-1'){
+		$('#reservatiomModal_equipment')
+			.parent()
+			.addClass('has-error');
+		error = true;
+	}
+	var subscriber = $('#reservatiomModal_subscriber').val();
+	if(!subscriber || subscriber === ''){
+		$('#reservatiomModal_subscriber')
+			.parent()
+			.addClass('has-error');
+		error = true;
+	}
+	
+	var note = $('#reservatiomModal_note').val();
+	var date = $('#reservatiomModal_date').val();
+	var startTime = $('#reservatiomModal_startTime').val();
+	var endTime = $('#reservatiomModal_endTime').val();
+	//日付を合成
+	var start = new Date(date+' '+startTime+':00');
+	if(start.getTime() === 0 || isNaN(start.getTime())){
+		$('#reservatiomModal_date')
+			.parent().parent()
+			.addClass('has-error');
+		error = true;
+	}
+	$("#reservatiomModal_start").val(start.getTime());
+	var end = new Date(date+' '+endTime+':00');
+	if(end.getTime() === 0 || isNaN(end.getTime())){
+		$('#reservatiomModal_date')
+			.parent().parent()
+			.addClass('has-error');
+		error = true;
+	}
+	$("#reservatiomModal_end").val(end.getTime());
+	var sendData = $(this).serialize();
+	if(error){
+		return;
+	}
+	//送信
+	var url = './api.xsp/reservation/';
+	
+	$.ajax({
+		url : url,
+		method: 'POST',
+		data : sendData,
+		dataType: 'json',
+		success: function(data){
+			$('#calendar').fullCalendar('addEventSource', data);
+		},
+		complete: function(){
+			$('#reservatiomModal').modal('hide');
+		}
+	});
+}
