@@ -44,7 +44,7 @@ api.getEquipments = function getEquipments(){
 	}
 	return ret;
 };
-api.updateEvent = function(obj){
+api.updateEvent = function updateEvent(obj){
 	var unid = obj.unid;
 	var resDoc:NotesDocument = database.getDocumentByUNID(unid);
 	if(!!resDoc){

@@ -108,7 +108,9 @@ calendar.select = function select(startDate, endDate, allDay, jsEvent, view){
 	$('#update').hide();
 	$('#reserve').show();
 };
+calendar.currentEvent = null;
 calendar.eventClick = function eventClick(event, jsEvent, view){
+	calendar.currentEvent = event;
 	$('#reservatiomModal').modal();
 	$('#reservatiomModal_equipment').val(event.equipmentId);
 	var dateStr = 	
@@ -208,16 +210,22 @@ calendar.modifyReservation = function modifyReservation(e){
 		return;
 	}
 	// 送信
-	var url = './api.xsp/reservation/';
+	var url = './api.xsp/reservation/?method=' + calendar.method;
 	
 	$.ajax({
 		id: id,
 		url : url,
-		method: calendar.method,
+		method: 'POST',
 		data : sendData,
 		dataType: 'json',
 		success: function(data){
-			$('#calendar').fullCalendar('addEventSource', data);
+			if(calendar.method === 'POST'){
+				$('#calendar').fullCalendar('addEventSource', [data]);
+			}else{
+				var event = calendar.currentEvent;
+				$.extend(event, data);
+				$('#calendar').fullCalendar('updateEvent ', event);
+			}
 		},
 		complete: function(){
 			$('#reservatiomModal').modal('hide');

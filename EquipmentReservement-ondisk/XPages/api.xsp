@@ -22,8 +22,8 @@
 		<xe:this.service>
 			<xe:customRestService
 				doGet="#{javascript:api.getReservation(param.get('unid'));}">
-				<xe:this.doPost><![CDATA[#{javascript:
-var obj = {
+				<xe:this.doPost><![CDATA[#{javascript:var obj = {
+	unid: param.get('id'),
 	equipmentId: param.get('equipmentId'),
 	subscriber: param.get('subscriber'),
 	start: param.get('start'),
@@ -31,9 +31,21 @@ var obj = {
 	note: param.get('note'),
 	date: param.get('date')
 };
-var ret = [api.createReservation(obj)];
+var ret;
+switch (param.get('method')){
+	case 'PUT':
+		print('PUT');
+		ret = api.updateEvent(obj);
+		break;
+	case 'POST':
+		print('POST');
+		ret = api.createReservation(obj);
+		break;
+};
+print(toJson(ret));
 return toJson(ret);}]]></xe:this.doPost>
-				<xe:this.doPut><![CDATA[#{javascript:var obj = {
+				<xe:this.doPut><![CDATA[#{javascript:print('PUT');
+var obj = {
 	unid: param.get('id'),
 	equipmentId: param.get('equipmentId'),
 	subscriber: param.get('subscriber'),
