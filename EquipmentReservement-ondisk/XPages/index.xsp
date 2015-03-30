@@ -127,15 +127,19 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">
-						cancel
-					</button>
+					<div class="pull-left">
+						<button id="remove" type="button" class="btn btn-danger ">
+							remove</button>
+					</div>
 					<button id="reserve" type="button" class="btn btn-primary">
 						reserve
 					</button>
 					<button id="update" type="button" class="btn btn-primary">
 						update
                     </button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						cancel
+					</button>
 				</div>
 			</div>
 		</div>

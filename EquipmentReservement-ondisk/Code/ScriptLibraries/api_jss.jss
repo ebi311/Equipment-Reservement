@@ -1,10 +1,9 @@
 var api = {};
-api.getEvents = function getEvents(year, month){
+api.getEvents = function getEvents(start, end){
 	var keys = new java.util.Vector();
-	keys.add(year);
-	keys.add(month);
+	var dateRange = session.createDateRange(start, end);
 	var resView = database.getView('Reservations');
-	var entries = resView.getAllEntriesByKey(keys, true);
+	var entries = resView.getAllEntriesByKey(dateRange);
 	var entry:NotesViewEntry = entries.getFirstEntry();
 	var ret = [], event;
 	while(!!entry){
@@ -51,6 +50,14 @@ api.updateEvent = function updateEvent(obj){
 		api._modifyReservation(resDoc,obj);
 	}
 	return api._createCallendarEvent(resDoc);
+};
+api.removeEvent = function removeEvent(obj){
+	var unid = obj.unid;
+	var resDoc:NotesDocument = database.getDocumentByUNID(unid);
+	if(!!resDoc){
+		resDoc.remove(true);
+	}
+	return {id: unid};
 };
 api._modifyReservation = function _modifyReservation(doc,obj){
 	doc.replaceItemValue('equipmentId', obj.equipmentId);

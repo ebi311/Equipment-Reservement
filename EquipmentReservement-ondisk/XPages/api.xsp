@@ -14,7 +14,11 @@
 
 		<xe:this.service>
 			<xe:customRestService>
-				<xe:this.doGet><![CDATA[#{javascript:toJson(api.getEvents(param.get("year"), param.get("month")));}]]></xe:this.doGet>
+				<xe:this.doGet><![CDATA[#{javascript:var start = new Date();
+var end = new Date();
+start.setTime(param.get('start'));
+end.setTime(param.get('end'));
+toJson(api.getEvents(start,end));}]]></xe:this.doGet>
 			</xe:customRestService>
 		</xe:this.service>
 	</xe:restService>
@@ -41,8 +45,12 @@ switch (param.get('method')){
 		print('POST');
 		ret = api.createReservation(obj);
 		break;
+	case 'DELETE':
+		print('DELETE');
+		ret = api.removeEvent(obj);
+		break;
+		
 };
-print(toJson(ret));
 return toJson(ret);}]]></xe:this.doPost>
 				<xe:this.doPut><![CDATA[#{javascript:print('PUT');
 var obj = {
