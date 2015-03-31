@@ -9,8 +9,8 @@ It has been created with XPages, will work under IBM Domino.
 
 * Server
 
-* IBM Domino 9.0.2
+  * IBM Domino 9.0.2
 
 * Client
 
- * Chrome / Firefox
+  * Chrome / Firefox
