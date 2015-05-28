@@ -8,6 +8,10 @@ XPagesで作成されており、IBM Domino 環境で動作します。
 
 It has been created with XPages, will work under IBM Domino.
 
+## Screenshots
+
+
+
 ## 動作確認環境(Operation verification environment)
 
 * Server
